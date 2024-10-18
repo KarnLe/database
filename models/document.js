@@ -8,10 +8,13 @@ const Document = sequelize.define('document', {
         primaryKey: true,
         autoIncrement: true
     },
-    name: {
+    title: {
         type: DataTypes.STRING(255),
         allowNull: false,
-        unique: true
+    },
+    sub_title: {
+        type: DataTypes.STRING(255),
+        allowNull: true,
     },
     content: {
         type: DataTypes.TEXT,
@@ -19,7 +22,7 @@ const Document = sequelize.define('document', {
     },
     created: {
         type: DataTypes.STRING(255),
-        allowNull: false
+        allowNull: true
     },
 }, {
     timestamps: false,

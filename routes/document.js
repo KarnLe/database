@@ -6,4 +6,6 @@ const router = express.Router();
 
 router.get('/', documentController.list);
 
+router.get('/details/:id', documentController.getDocumentDetail);
+
 module.exports = router;
